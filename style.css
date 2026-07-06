@@ -219,6 +219,22 @@ section {
   transform: translateY(-2px);
 }
 
+/* O QUE É GRID */
+.oque-e-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
 /* HERO COMPOSIÇÃO DE NETWORK (DRAMATURGIA) */
 .hero-composite {
   position: relative;
@@ -945,6 +961,8 @@ section {
   .hero-actions { justify-content: center; }
   .hero-composite { width: 100%; max-width: 440px; margin: 0 auto; }
   
+  .oque-e-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  
   .produtos-header { flex-direction: column; align-items: flex-start; gap: 16px; }
   .produtos-grid { grid-template-columns: 1fr 1fr; }
   .produtos-grid.telas { grid-template-columns: 1fr 1fr; }
@@ -959,6 +977,17 @@ section {
 @media (max-width: 640px) {
   section { padding: 60px 0; }
   .hero { padding: 120px 0 60px; }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
   .produtos-grid, .produtos-grid.telas { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   .modelo-grid { grid-template-columns: 1fr; }
