@@ -36,6 +36,22 @@
 }
 </script>
 <style>
+  /* Garantia de aplicação imediata (ignora cache do navegador local) */
+  #modelo {
+    text-align: center !important;
+  }
+  #modelo .section-title,
+  #modelo .section-sub {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .modelo-inner {
+    max-width: 1180px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
   /* Desbloqueio absoluto de cliques e digitação no formulário do Hero */
   .hero-glow-back {
     pointer-events: none !important;
@@ -49,6 +65,42 @@
   .hero-form-card * {
     pointer-events: auto !important;
     user-select: text !important;
+  }
+
+  /* Força exibição lado a lado dos totens na seção Zero Royalties */
+  .no-royalties-totems {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+    margin: 40px auto 0 !important;
+    max-width: 1200px !important;
+    width: 100% !important;
+  }
+  .no-royalties-totem-banner {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    background: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .no-royalties-totem-banner img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  @media (max-width: 960px) {
+    .no-royalties-totems {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .no-royalties-totems {
+      grid-template-columns: 1fr !important;
+    }
   }
 </style>
 </head>
@@ -200,7 +252,7 @@
           <p class="produto-desc">Modelo robusto para alta visibilidade de anúncios. Recomendado para supermercados, shoppings e centros comerciais.</p>
         </div>
         <div class="produto-card">
-          <div class="produto-img"><img src="imagens/totem-real-1.png" alt="Totem Publicitário de 43 polegadas" width="220" height="250" loading="lazy"></div>
+          <div class="produto-img"><img src="imagens/totem%2043.webp" alt="Totem Publicitário de 43 polegadas" width="220" height="250" loading="lazy"></div>
           <div class="produto-tag">43 polegadas</div>
           <div class="produto-nome">Totem 43”</div>
           <p class="produto-desc">O maior e mais imponente totem vertical. Máximo destaque visual e presença de marca em locais de altíssimo tráfego.</p>

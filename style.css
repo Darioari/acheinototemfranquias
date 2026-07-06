@@ -587,12 +587,12 @@ section {
 .no-royalties-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
 
 .no-royalties-totems {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin: 40px auto 0;
-  max-width: 1000px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
 }
 .no-royalties-totem-banner {
   border-radius: 12px;
@@ -611,11 +611,9 @@ section {
   box-shadow: 0 20px 45px rgba(51, 119, 255, 0.2);
 }
 .no-royalties-totem-banner img {
-  height: 380px;
-  max-width: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   display: block;
-  object-fit: contain;
 }
 
 
@@ -954,6 +952,7 @@ section {
   .modelo-grid { grid-template-columns: 1fr 1fr; }
   .planos-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
   .planos-diferencas { grid-template-columns: 1fr; }
+  .no-royalties-totems { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .nav-links { display: none; } /* Simplicidade em mobile */
 }
 
@@ -963,6 +962,7 @@ section {
   .produtos-grid, .produtos-grid.telas { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   .modelo-grid { grid-template-columns: 1fr; }
+  .no-royalties-totems { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .no-royalties { flex-direction: column; text-align: center; }
   .planos-diferencas { padding: 20px; }
